@@ -52,12 +52,7 @@ namespace GS4_Calibration_Utility
             sisterServo.MoveMin();
         }
 
-        private void ScrollServoToCalibrate_Scroll(object sender, ScrollEventArgs e)
-        {
-            selectedServo.Enable();
-            selectedServo.MovePercent(ScrollServoToCalibrate.Value);
-
-        }
+        
 
         private void btnConnectPanelTest_Click(object sender, EventArgs e)
         {

@@ -688,4 +688,33 @@
         igD/2Q==
 </value>
   </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>1) Remove Power and USB cable
+2) Open servo control board cover
+3) Remove jumper JP3-1 (see picture)
+4) Plug Power and USB cable
+5) Make sure motion panel pushrods are disconnected from servos 
+    for affected panel
+6) Set COM port of the board (see system settings)
+7) click "Connect"
+8) select servo to calibrate (see charts for ID)
+9) select sister servo "next to the one that failed"
+10) Click Start
+11) Click move sister to MAX and adjust with arrows 
+      button the new servo to the same position.
+12) Click "Set MAX"
+13) Click move sister to MIN and adjust with arrows 
+      button the new servo to the same position.
+14) click "Set MIN"
+13) Click move sister to CENTER and adjust with arrows 
+      buttons the new servo to the same position.
+14) click "Set START"
+15) Click Commit
+
+Then you can go to the panel testing tab and test the desired panel.
+
+
+
+</value>
+  </data>
 </root>

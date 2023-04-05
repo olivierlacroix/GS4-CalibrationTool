@@ -49,7 +49,6 @@ namespace GS4_Calibration_Utility
             this.btnCommit = new System.Windows.Forms.Button();
             this.btnSetMin = new System.Windows.Forms.Button();
             this.btnSetMAX = new System.Windows.Forms.Button();
-            this.ScrollServoToCalibrate = new System.Windows.Forms.HScrollBar();
             this.MoveSisterServoMIN = new System.Windows.Forms.Button();
             this.MoveSisterServoMAX = new System.Windows.Forms.Button();
             this.btnConnect = new System.Windows.Forms.Button();
@@ -67,10 +66,16 @@ namespace GS4_Calibration_Utility
             this.cboPanelList = new System.Windows.Forms.ComboBox();
             this.btnConnectBoard = new System.Windows.Forms.Button();
             this.btnDisconnect = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabModes.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPanelTesting.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblComPort
@@ -95,9 +100,9 @@ namespace GS4_Calibration_Utility
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(910, 15);
+            this.pictureBox1.Location = new System.Drawing.Point(553, 192);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(319, 466);
+            this.pictureBox1.Size = new System.Drawing.Size(189, 303);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
@@ -105,20 +110,23 @@ namespace GS4_Calibration_Utility
             // 
             this.tabModes.Controls.Add(this.tabPage1);
             this.tabModes.Controls.Add(this.tabPanelTesting);
+            this.tabModes.Controls.Add(this.tabPage2);
             this.tabModes.Enabled = false;
             this.tabModes.Location = new System.Drawing.Point(26, 66);
             this.tabModes.Name = "tabModes";
             this.tabModes.SelectedIndex = 0;
-            this.tabModes.Size = new System.Drawing.Size(851, 555);
+            this.tabModes.Size = new System.Drawing.Size(756, 555);
             this.tabModes.TabIndex = 11;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.SETPOS);
+            this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.SetSTART);
             this.tabPage1.Controls.Add(this.btnMoveServoToCalibrateCENTER);
             this.tabPage1.Controls.Add(this.MoveSisterServoCENTER);
             this.tabPage1.Controls.Add(this.btnMoveServoToCalibrateMIN);
+            this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.btnMoveServoToCalibrateMAX);
             this.tabPage1.Controls.Add(this.btnIncreaseFast);
             this.tabPage1.Controls.Add(this.btnDecreaseFast);
@@ -127,7 +135,6 @@ namespace GS4_Calibration_Utility
             this.tabPage1.Controls.Add(this.btnCommit);
             this.tabPage1.Controls.Add(this.btnSetMin);
             this.tabPage1.Controls.Add(this.btnSetMAX);
-            this.tabPage1.Controls.Add(this.ScrollServoToCalibrate);
             this.tabPage1.Controls.Add(this.MoveSisterServoMIN);
             this.tabPage1.Controls.Add(this.MoveSisterServoMAX);
             this.tabPage1.Controls.Add(this.btnConnect);
@@ -138,16 +145,16 @@ namespace GS4_Calibration_Utility
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(843, 522);
+            this.tabPage1.Size = new System.Drawing.Size(748, 522);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Servo calibration pair mode";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // SETPOS
             // 
-            this.SETPOS.Location = new System.Drawing.Point(620, 222);
+            this.SETPOS.Location = new System.Drawing.Point(603, 22);
             this.SETPOS.Name = "SETPOS";
-            this.SETPOS.Size = new System.Drawing.Size(135, 134);
+            this.SETPOS.Size = new System.Drawing.Size(119, 123);
             this.SETPOS.TabIndex = 28;
             this.SETPOS.Text = "SET calibrated servo POSITION baseline";
             this.SETPOS.UseVisualStyleBackColor = true;
@@ -205,7 +212,7 @@ namespace GS4_Calibration_Utility
             // 
             // btnIncreaseFast
             // 
-            this.btnIncreaseFast.Location = new System.Drawing.Point(569, 110);
+            this.btnIncreaseFast.Location = new System.Drawing.Point(445, 62);
             this.btnIncreaseFast.Name = "btnIncreaseFast";
             this.btnIncreaseFast.Size = new System.Drawing.Size(58, 55);
             this.btnIncreaseFast.TabIndex = 22;
@@ -215,7 +222,7 @@ namespace GS4_Calibration_Utility
             // 
             // btnDecreaseFast
             // 
-            this.btnDecreaseFast.Location = new System.Drawing.Point(325, 110);
+            this.btnDecreaseFast.Location = new System.Drawing.Point(292, 62);
             this.btnDecreaseFast.Name = "btnDecreaseFast";
             this.btnDecreaseFast.Size = new System.Drawing.Size(62, 55);
             this.btnDecreaseFast.TabIndex = 21;
@@ -225,7 +232,7 @@ namespace GS4_Calibration_Utility
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(643, 110);
+            this.button2.Location = new System.Drawing.Point(519, 62);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(58, 55);
             this.button2.TabIndex = 20;
@@ -235,7 +242,7 @@ namespace GS4_Calibration_Utility
             // 
             // btnFineDecrease
             // 
-            this.btnFineDecrease.Location = new System.Drawing.Point(398, 110);
+            this.btnFineDecrease.Location = new System.Drawing.Point(365, 62);
             this.btnFineDecrease.Name = "btnFineDecrease";
             this.btnFineDecrease.Size = new System.Drawing.Size(62, 55);
             this.btnFineDecrease.TabIndex = 19;
@@ -272,14 +279,6 @@ namespace GS4_Calibration_Utility
             this.btnSetMAX.Text = "Set MAX";
             this.btnSetMAX.UseVisualStyleBackColor = true;
             this.btnSetMAX.Click += new System.EventHandler(this.btnSetMAX_Click);
-            // 
-            // ScrollServoToCalibrate
-            // 
-            this.ScrollServoToCalibrate.Location = new System.Drawing.Point(325, 67);
-            this.ScrollServoToCalibrate.Name = "ScrollServoToCalibrate";
-            this.ScrollServoToCalibrate.Size = new System.Drawing.Size(186, 26);
-            this.ScrollServoToCalibrate.TabIndex = 15;
-            this.ScrollServoToCalibrate.Scroll += new System.Windows.Forms.ScrollEventHandler(this.ScrollServoToCalibrate_Scroll);
             // 
             // MoveSisterServoMIN
             // 
@@ -391,7 +390,7 @@ namespace GS4_Calibration_Utility
             this.tabPanelTesting.Location = new System.Drawing.Point(4, 29);
             this.tabPanelTesting.Name = "tabPanelTesting";
             this.tabPanelTesting.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPanelTesting.Size = new System.Drawing.Size(843, 522);
+            this.tabPanelTesting.Size = new System.Drawing.Size(748, 522);
             this.tabPanelTesting.TabIndex = 1;
             this.tabPanelTesting.Text = "Panel testing";
             this.tabPanelTesting.UseVisualStyleBackColor = true;
@@ -487,15 +486,53 @@ namespace GS4_Calibration_Utility
             this.btnDisconnect.UseVisualStyleBackColor = true;
             this.btnDisconnect.Click += new System.EventHandler(this.btnDisconnect_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(558, 169);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(111, 20);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Servo ID chart";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(788, 95);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(485, 520);
+            this.label5.TabIndex = 16;
+            this.label5.Text = resources.GetString("label5.Text");
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::GS4_Calibration_Utility.Properties.Resources.Jumper_JP3_1_9030_;
+            this.pictureBox2.Location = new System.Drawing.Point(4, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(729, 514);
+            this.pictureBox2.TabIndex = 17;
+            this.pictureBox2.TabStop = false;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.pictureBox2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(748, 522);
+            this.tabPage2.TabIndex = 2;
+            this.tabPage2.Text = "Jumper location";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
             // Calibration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1282, 755);
+            this.ClientSize = new System.Drawing.Size(1298, 814);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnDisconnect);
             this.Controls.Add(this.btnConnectBoard);
             this.Controls.Add(this.tabModes);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.comPort);
             this.Controls.Add(this.lblComPort);
             this.MaximizeBox = false;
@@ -509,6 +546,8 @@ namespace GS4_Calibration_Utility
             this.tabPage1.PerformLayout();
             this.tabPanelTesting.ResumeLayout(false);
             this.tabPanelTesting.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.tabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -521,7 +560,6 @@ namespace GS4_Calibration_Utility
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TabControl tabModes;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.HScrollBar ScrollServoToCalibrate;
         private System.Windows.Forms.Button MoveSisterServoMIN;
         private System.Windows.Forms.Button MoveSisterServoMAX;
         private System.Windows.Forms.Button btnConnect;
@@ -552,5 +590,9 @@ namespace GS4_Calibration_Utility
         private Button MoveSisterServoCENTER;
         private Button SetSTART;
         private Button SETPOS;
+        private Label label4;
+        private TabPage tabPage2;
+        private PictureBox pictureBox2;
+        private Label label5;
     }
 }

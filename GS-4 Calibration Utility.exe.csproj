@@ -138,6 +138,7 @@
     <Folder Include="My\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="images\Jumper JP3-1[9030].jpg" />
     <Content Include="yeisrvo.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
